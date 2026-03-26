@@ -1,0 +1,10 @@
+from google import genai
+
+client = genai.Client(api_key="AIzaSyCV4O_5XN8bkZuMXW3839es4uQ8_qNtNKw")
+
+response = client.models.generate_content(
+    model="gemini-2.0-flash",
+    contents="Say hello in one line"
+)
+
+print(response.text)
